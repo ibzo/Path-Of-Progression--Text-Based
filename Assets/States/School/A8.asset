@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad29e34ec48b66d4f8defdf07b8b610e, type: 3}
+  m_Name: A8
+  m_EditorClassIdentifier: 
+  storyText: 'The shopkeeper tells you that he''ll give you a discount but next time
+    he won''t let you off
+
+    [+1 Charisma]
+
+    You eat your sweet happily
+
+
+
+    1)
+    Go home'
+  nextStates:
+  - {fileID: 11400000, guid: 1fb1d7622aa2f7546be523bebcf6f623, type: 2}
+  userInput: 1
+  altState: {fileID: 0}
+  stateDepend: {fileID: 0}
+  isAltState: 0
+  altSwitch: 0
+  knowledgeValue: 0
+  charismaValue: 1
+  wellbeingValue: 0
+  buttonsRequired: 0
+  availableOptions:
+  - 1

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad29e34ec48b66d4f8defdf07b8b610e, type: 3}
+  m_Name: A1 - Going To School
+  m_EditorClassIdentifier: 
+  storyText: "You are 11 years old. Finally, your mother lets you go to school by
+    yourself. \r\nOn your way to school, your friend throws something at you. It
+    is brown in colour, circle in shape, and hurt when it hit you. \r\nYou pick it
+    up and decide what to do with it.\r\n\r\n1) You throw it back at your friend\r\n2)
+    You keep it with you\r"
+  nextStates:
+  - {fileID: 11400000, guid: 752d7cbd33c2da14783a350e0aeb9190, type: 2}
+  - {fileID: 11400000, guid: 4574094aca62b144db1752a35e70af54, type: 2}
+  userInput: 2
+  altState: {fileID: 0}
+  stateDepend: {fileID: 0}
+  isAltState: 0
+  altSwitch: 0
+  knowledgeValue: 0
+  charismaValue: 0
+  wellbeingValue: 0
+  buttonsRequired: 0
+  availableOptions:
+  - 1
+  - 2

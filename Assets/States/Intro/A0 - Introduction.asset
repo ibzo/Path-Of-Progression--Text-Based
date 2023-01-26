@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad29e34ec48b66d4f8defdf07b8b610e, type: 3}
+  m_Name: A0 - Introduction
+  m_EditorClassIdentifier: 
+  storyText: 'Welcome to path of progression (text edition).
+
+
+    Explore your options
+    to find out how you can be financially educated!
+
+
+    You''ll be asked at each
+    stage to press a number key to select an available option presented to you. Choose
+    wisely, your actions will determine how you progress through the story.
+
+
+    At
+    any time, push ''q'' to quit.
+
+
+    To continue, press ''1''.'
+  nextStates:
+  - {fileID: 11400000, guid: 8e1553a7fb967f64890dd21d35f8ee14, type: 2}
+  userInput: 1
+  altState: {fileID: 0}
+  stateDepend: {fileID: 0}
+  isAltState: 0
+  altSwitch: 0
+  knowledgeValue: 0
+  charismaValue: 0
+  wellbeingValue: 0
+  buttonsRequired: 0
+  availableOptions:
+  - 1
