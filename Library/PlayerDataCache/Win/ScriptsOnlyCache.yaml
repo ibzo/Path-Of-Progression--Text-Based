@@ -35,7 +35,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Main.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -815,6 +815,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Main.unity
   playerPath: D:/Personal Files/Career/Game Dev/Courses/Complete C# Unity Game Developer
-    2D/Text101/Game Builds/Text101/Build/Windows/x86/Text101.exe
+    2D/Game Builds/Text101/Build/Windows/x86/Text101.exe

@@ -59,18 +59,20 @@ public class AdventureGame : MonoBehaviour
         var nextStates = state.GetNextState();
 
         //sets the buttons on screen
-        /*
         if (!buttonVisible)
         {
+            Debug.Log("No button available");
             //state.SetAvailableOptions();
             for (int i = 0; i < nextStates.Length; i++)
             {
-                buttonGen.GenerateButtons(i);
+                //Generate buttons
+                //buttonGen.GenerateButtons(i);
             }
-            
+
             buttonVisible = true;
+            Debug.Log("Button available");
         }
-        */
+
 
         //reset values if on the starting state
         if (state == startingState)

@@ -43,13 +43,17 @@ public class State : ScriptableObject
     
     public string GetAvailableOptions(int i)
     {
-        for (int a = 0; a < nextStates.Length;  a++)
+        /*
+        for (int a = 0; a < nextStates.Length; a++)
         {
             availableOptions[a] = (a + 1).ToString();
             Debug.Log("availableOptions["+a+"] = "+availableOptions[a]);
         }
+        */
 
-        return availableOptions[i];
+        ///TEST
+        string test = "good";
+        return test;
     }
     
 

@@ -7,21 +7,27 @@ public class ButtonGenerator : MonoBehaviour
 {
     State state;
 
-    public GameObject button;
-    Text buttonText;
+    public GameObject buttonPrefab;
+    [SerializeField] GameObject buttonContainer;
+    [SerializeField] Text buttonText;
 
     int buttonNum;
 
     public void Start()
     {
-        buttonText = button.GetComponentInChildren<Text>();
+        //buttonText = button.GetComponentInChildren<Text>();
     }
 
     public void GenerateButtons(int i)
     {
+        Debug.Log("Generating button");
+
         //buttonNum = state.GetButtonsRequired();
-        Instantiate(button, transform.position, transform.rotation, this.transform);
+        Instantiate(buttonPrefab, transform.position, transform.rotation, this.transform);
+
         //change the button text to the available user inputs
-        buttonText.text = state.GetAvailableOptions(i);
+
+        //buttonText = buttonContainer.GetComponentInChildren<Text>();
+        //buttonText.text = "Good";
     }
 }
