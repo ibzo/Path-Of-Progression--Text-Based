@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad29e34ec48b66d4f8defdf07b8b610e, type: 3}
+  m_Name: A4
+  m_EditorClassIdentifier: 
+  storyText: 'She tells you the basics about money and you finally find out what
+    your friend threw at you. It is money!
+
+    [+1 Knowledge]
+
+
+
+    You..
+
+
+
+    1)
+    Keep it quiet and finish the lesson'
+  nextStates:
+  - {fileID: 11400000, guid: 221df25b0ae1af642a995dc96807f764, type: 2}
+  userInput: 1
+  altState: {fileID: 11400000, guid: 558b5ba029ea80b4eaa857d7fefc2bc5, type: 2}
+  stateDepend: {fileID: 11400000, guid: 8e1553a7fb967f64890dd21d35f8ee14, type: 2}
+  isAltState: 1
+  altSwitch: 2
+  knowledgeValue: 1
+  charismaValue: 0
+  wellbeingValue: 0
+  buttonsRequired: 0
+  availableOptions:
+  - 1

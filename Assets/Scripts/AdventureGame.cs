@@ -61,18 +61,14 @@ public class AdventureGame : MonoBehaviour
         //sets the buttons on screen
         if (!buttonVisible)
         {
-            Debug.Log("No button available");
-            //state.SetAvailableOptions();
             for (int i = 0; i < nextStates.Length; i++)
             {
                 //Generate buttons
-                //buttonGen.GenerateButtons(i);
+                buttonGen.GenerateButtons(i);
             }
 
             buttonVisible = true;
-            Debug.Log("Button available");
         }
-
 
         //reset values if on the starting state
         if (state == startingState)
@@ -83,9 +79,8 @@ public class AdventureGame : MonoBehaviour
         }
 
         //manages the quitting state
-        if(state == quittingState)
+        if (state == quittingState)
         {
-            Debug.Log("Quitting...");
             Quit();
         }
 
@@ -94,20 +89,23 @@ public class AdventureGame : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + i))
             {
+
                 state.SetUserInput(i + 1);
                 state = nextStates[i];
                 previousState = state;
+
+                //remove buttons
+                buttonGen.DestroyButtons();
                 buttonVisible = false;
+
                 updateStats();
             }
         }
-
         textComponent.text = state.GetStateStory();
     }
 
     private void Quit()
     {
-        Debug.Log("Check input");
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("Quit");

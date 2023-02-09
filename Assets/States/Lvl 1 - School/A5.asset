@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad29e34ec48b66d4f8defdf07b8b610e, type: 3}
+  m_Name: A5
+  m_EditorClassIdentifier: 
+  storyText: 'She tells you about the value of money, what it means to save your
+    money and how people get more. You discover that you have a 2 pence coin. Everyone
+    in the class sees your money.
+
+    [+1 Knowledge]
+
+
+
+    1) End the class'
+  nextStates:
+  - {fileID: 11400000, guid: 221df25b0ae1af642a995dc96807f764, type: 2}
+  userInput: 1
+  altState: {fileID: 0}
+  stateDepend: {fileID: 0}
+  isAltState: 0
+  altSwitch: 0
+  knowledgeValue: 1
+  charismaValue: 0
+  wellbeingValue: 0
+  buttonsRequired: 0
+  availableOptions:
+  - 1

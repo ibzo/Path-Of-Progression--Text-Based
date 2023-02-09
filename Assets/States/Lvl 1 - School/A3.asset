@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad29e34ec48b66d4f8defdf07b8b610e, type: 3}
+  m_Name: A3
+  m_EditorClassIdentifier: 
+  storyText: 'Later on, you are in math class and your teacher explains a problem
+    about money.
+
+
+
+    You..
+
+
+
+    1) Just wait for the lesson to finish
+
+    2)
+    Ask her what money is'
+  nextStates:
+  - {fileID: 11400000, guid: 221df25b0ae1af642a995dc96807f764, type: 2}
+  - {fileID: 11400000, guid: 12fceadea44c306479a6c1e99a8d4128, type: 2}
+  userInput: 2
+  altState: {fileID: 0}
+  stateDepend: {fileID: 0}
+  isAltState: 0
+  altSwitch: 0
+  knowledgeValue: 0
+  charismaValue: 0
+  wellbeingValue: 0
+  buttonsRequired: 0
+  availableOptions:
+  - 1
+  - 2

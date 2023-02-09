@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad29e34ec48b66d4f8defdf07b8b610e, type: 3}
+  m_Name: A7
+  m_EditorClassIdentifier: 
+  storyText: "You go to the shop and see the sweets your mum buys. You ask for them
+    and the shop keeper says you need to give him 5 pence for them.  \r\n\r\nYou..\r\n\r\n1)
+    Forget about buying it"
+  nextStates:
+  - {fileID: 11400000, guid: b990a05a897d68343bc989c96b0921c7, type: 2}
+  userInput: 1
+  altState: {fileID: 11400000, guid: fc43a10787cc7d048a884872409df45b, type: 2}
+  stateDepend: {fileID: 11400000, guid: 8e1553a7fb967f64890dd21d35f8ee14, type: 2}
+  isAltState: 1
+  altSwitch: 2
+  knowledgeValue: 0
+  charismaValue: 0
+  wellbeingValue: 0
+  buttonsRequired: 0
+  availableOptions:
+  - 1

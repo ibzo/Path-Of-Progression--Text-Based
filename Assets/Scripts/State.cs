@@ -52,7 +52,7 @@ public class State : ScriptableObject
         */
 
         ///TEST
-        string test = "good";
+        string test = "state good";
         return test;
     }
     
