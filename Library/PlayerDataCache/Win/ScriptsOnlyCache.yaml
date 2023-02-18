@@ -31,6 +31,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
@@ -70,6 +71,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12366}
     - Class: 114
       Script: {instanceID: 12742}
+    - Class: 114
+      Script: {instanceID: 13374}
     - Class: 114
       Script: {instanceID: 13378}
     - Class: 114
@@ -323,7 +326,7 @@ ScriptsOnlyBuild:
     className: WarpTextExample
   - hash:
       serializedVersion: 2
-      Hash: a7d290045d91c0efbc15d65dd4d5e4c6
+      Hash: 2fea9ec5c0eb266eee9e64e714d0f006
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AdventureGame
@@ -407,7 +410,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: db383debccf025fb7548a9120b6528c5
+      Hash: a35a3f59a6cea2be59ac8dda1c47108f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonGenerator

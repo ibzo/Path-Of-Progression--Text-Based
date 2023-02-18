@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour
 {
-    [SerializeField] Text textComponent;
+    [SerializeField] Text storyText;
     [SerializeField] State startingState;
     [SerializeField] State quittingState;
 
     State state;
     State previousState;
+    bool isReturning;
 
     ButtonGenerator buttonGen;
     bool buttonVisible;
@@ -29,7 +30,7 @@ public class AdventureGame : MonoBehaviour
     {
         //set the starting story state
         state = startingState;
-        textComponent.text = state.GetStateStory();
+        storyText.text = state.GetStateStory();
 
         //button gen
         buttonVisible = false;
@@ -46,16 +47,18 @@ public class AdventureGame : MonoBehaviour
     {
         manageState();
         altState();
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            state = quittingState;
-        }
     }
 
     private void manageState()
     {
-        //sets the next available states and updates previous state
+        //manages the quitting state
+        if (Input.GetKeyDown(KeyCode.Q))
+            state = quittingState;
+
+        if (state == quittingState)
+            Quit();
+
+        //sets the next available states
         var nextStates = state.GetNextState();
 
         //sets the buttons on screen
@@ -63,49 +66,91 @@ public class AdventureGame : MonoBehaviour
         {
             for (int i = 0; i < nextStates.Length; i++)
             {
-                //Generate buttons
                 buttonGen.GenerateButtons(i);
             }
-
             buttonVisible = true;
+        }
+
+        //manages other states
+        if (!isReturning)
+        {
+            for (int i = 0; i < nextStates.Length; i++)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1 + i) || Input.GetKeyDown(KeyCode.Q))
+                {
+                    updateStateScreen(nextStates, i);
+                    updateStats();
+                    break;
+                }
+            }
+        }
+        else
+        {
+            isReturning = false;
         }
 
         //reset values if on the starting state
         if (state == startingState)
         {
-            Reset();
+            resetStats();
             updateStats();
             previousState = state;
         }
 
-        //manages the quitting state
-        if (state == quittingState)
-        {
-            Quit();
-        }
-
-        //manages other states
-        for (int i = 0; i < nextStates.Length; i++)
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
-            {
-
-                state.SetUserInput(i + 1);
-                state = nextStates[i];
-                previousState = state;
-
-                //remove buttons
-                buttonGen.DestroyButtons();
-                buttonVisible = false;
-
-                updateStats();
-            }
-        }
-        textComponent.text = state.GetStateStory();
+        storyText.text = state.GetStateStory();
     }
 
-    private void Quit()
+    private void altState()
+        {
+            if (state.GetIsAltState())
+            {
+                var dependInput = state.GetStateDependInput();
+
+                if (dependInput == state.GetAltSwitch())
+                {
+                    state = state.GetAltState();
+                }
+            
+            }
+        }
+
+    private void updateStateScreen(State[] nextStates, int i)
     {
+        //set the state
+        if (state == quittingState)
+        {
+            Debug.Log("Quitting");
+        }
+        else
+        {
+            Debug.Log("Not Quitting");
+
+            state.SetUserInput(i + 1);
+            state = nextStates[i];
+            if (state != quittingState)
+            {
+                previousState = state;
+                Debug.Log("Previous state = "+state.name);
+            }
+        }
+
+        //remove buttons
+        buttonGen.DestroyButtons();
+        buttonVisible = false;
+    }
+
+    private void updateStats()
+        {
+            state.AddToCharacter(ref knowledge, ref charisma, ref wellbeing);
+        
+            //updateStatUI
+            knowledgeUI.text = knowledge.ToString();
+            charismaUI.text = charisma.ToString();
+            wellbeingBar.value = wellbeing;
+        }
+
+    private void Quit()
+    {       
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("Quit");
@@ -118,38 +163,17 @@ public class AdventureGame : MonoBehaviour
         {
             Debug.Log("Go back");
             state = previousState;
+            isReturning = true;
         }
     }
 
-    private void Reset()
+    private void resetStats()
     {
         knowledge = 0;
         charisma = 0;
         wellbeing = 0;
     }
 
-    private void altState()
-    {
-        if (state.GetIsAltState())
-        {
-            var dependInput = state.GetStateDependInput();
-
-            if (dependInput == state.GetAltSwitch())
-            {
-                state = state.GetAltState();
-            }
-            
-        }
-    }
-
-    private void updateStats()
-    {
-        state.AddToCharacter(ref knowledge, ref charisma, ref wellbeing);
-        
-        //updateStatUI
-        knowledgeUI.text = knowledge.ToString();
-        charismaUI.text = charisma.ToString();
-        wellbeingBar.value = wellbeing;
-    }
+    
 }
 

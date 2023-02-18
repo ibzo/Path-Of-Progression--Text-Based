@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66adfbc495364884188a8152099b5d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 144702747}
+  storyText: {fileID: 144702747}
   startingState: {fileID: 11400000, guid: b3f19cab16f4c4b43a9ce8ab70045366, type: 2}
   quittingState: {fileID: 11400000, guid: bc39219e280263b4d965674f21a90dde, type: 2}
   knowledgeUI: {fileID: 267393387}

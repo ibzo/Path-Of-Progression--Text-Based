@@ -18,8 +18,10 @@ MonoBehaviour:
     1) Yes
 
     2) No'
-  nextStates: []
-  userInput: 0
+  nextStates:
+  - {fileID: 11400000, guid: ba54cb34225a7654194e8f4fd9b2247b, type: 2}
+  - {fileID: 11400000, guid: ba54cb34225a7654194e8f4fd9b2247b, type: 2}
+  userInput: 2
   altState: {fileID: 0}
   stateDepend: {fileID: 0}
   isAltState: 0
@@ -27,3 +29,5 @@ MonoBehaviour:
   knowledgeValue: 0
   charismaValue: 0
   wellbeingValue: 0
+  buttonsRequired: 0
+  availableOptions: []
